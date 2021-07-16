@@ -21,4 +21,6 @@ Implementing Linear models with SGD. Adding Momentum to SGD and RMSProp for the 
 1. Using the CIFAR-10 dataset implement the CNN using Keras library.
 2. Fine-tuning of ImageNet for my own tasks. 
 
-## Week 4. WIP
+## Week 4.
+1. Autoencoders 
+2. Adversarial
