@@ -24,3 +24,6 @@ Implementing Linear models with SGD. Adding Momentum to SGD and RMSProp for the 
 ## Week 4.
 1. Autoencoders 
 2. Adversarial
+
+## Week 5. 
+1. RNN
