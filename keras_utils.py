@@ -6,7 +6,7 @@ from keras.models import save_model
 import tensorflow as tf
 import keras
 #from keras import backend as K
-from tensorflow.compat.v1.keras import backend as K
+from keras import backend as K
 
 import tqdm_utils
 
@@ -67,15 +67,15 @@ class ModelSaveCallback(keras.callbacks.Callback):
 
 # !!! remember to clear session/graph if you rebuild your graph to avoid out-of-memory errors !!!
 def reset_tf_session():
-    curr_session = tf.compat.v1.get_default_session()
+    curr_session = tf.get_default_session()
     # close current session
     if curr_session is not None:
         curr_session.close()
     # reset graph
     K.clear_session()
     # create new session
-    config = tf.compat.v1.ConfigProto()
+    config = tf.ConfigProto()
     config.gpu_options.allow_growth = True
-    s = tf.compat.v1.InteractiveSession(config=config)
+    s = tf.InteractiveSession(config=config)
     K.set_session(s)
     return s
